@@ -165,6 +165,7 @@ function Home() {
                 <span className="px-3 py-1 rounded-full bg-pink-800/50 text-white">Figma</span>
                 <span className="px-3 py-1 rounded-full bg-pink-400/80 text-white">Canva</span>
                 <span className="px-3 py-1 rounded-full bg-orange-400/80 text-white">Vite</span>
+                <span className="px-3 py-1 rounded-full bg-orange-800/80 text-white">Cursor</span>
               </div>
             </div>
           </div>
