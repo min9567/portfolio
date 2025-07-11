@@ -107,7 +107,7 @@ function Home() {
             </div>
             <div className="p-3 rounded-3xl transition-all duration-200 hover:shadow-lg hover:scale-110">
               <div className="text-center">
-                <span className="font-semibold">프레임워크</span>
+                <span className="font-semibold">라이브러리</span>
               </div>
               <div className="flex flex-wrap justify-center gap-2 mt-1 w-40">
                 <span className="px-3 py-1 rounded-full bg-black/90 text-white">ReactJS</span>
