@@ -12,6 +12,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* .bigTitle {
     font-size: clamp(2rem, 3rem, 3rem);
 } */
@@ -25,8 +32,82 @@
     font-family: 'yg-jalnan', sans-serif;
 }
 
+.Stitle {
+    font-family: 'GangwonEdu_OTFBoldA', sans-serif;
+}
+
+.Stitle3 {
+    font-family: 'GangwonEdu_OTFBoldA', sans-serif;
+}
+
 @media (max-width:555px) {
     .bigTitle {
         font-size: clamp(2rem, 10vw, 10rem);
+    }
+}
+
+@media (max-width:934px) {
+    .Ptext {
+        color: white;
+    }
+}
+
+@media (max-width:934px) {
+    .Ptext2 {
+        color: white;
+    }
+
+    .Ptext2:hover {
+        color: #193cb8;
+    }
+}
+
+@media (min-width:1374px) {
+    .Ptext {
+        color: white;
+    }
+
+    .Ptext2 {
+        color: white;
+    }
+
+    .Ptext3 {
+        color: white;
+    }
+}
+
+@media (max-width:934px) {
+    .Stitle {
+        margin-top: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 0;
+    }
+
+    .Stitle2 {
+        border: 0;
+        margin-bottom: 6px;
+    }
+
+    .Stitle3 {
+        margin-bottom: 6px;
+    }
+
+    .Stitle5 {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width:380px) {
+    .Stitle4 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width:370px) {
+    .Stitle5 {
+        font-size: 3.7rem;
     }
 }

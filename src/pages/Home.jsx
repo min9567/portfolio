@@ -1,4 +1,7 @@
+import { useEffect, useState } from "react"
+
 import home from "../css/Home.module.css"
+
 import github from "../../public/github.svg"
 import notion from "../../public/notion.svg"
 import csharp from "../../public/csharp.svg"
@@ -8,13 +11,37 @@ import withgoa from "../../public/withgoa.svg"
 import withgo from "../../public/withgo.svg"
 import scheduler from "../../public/scheduler.svg"
 import green from "../../public/green.svg"
+import noimage from "../../public/noimage.svg"
+import email from "../../public/email.svg"
+import phone from "../../public/phone.svg"
+import git from "../../public/git.svg"
+
+import Pcsharp from "./Pcsharp"
+import WithgoPwa from "./WithgoPwa"
+import Airservice from "./Airservice"
+import WithgoA from "./WithgoA"
+import Withgoi from "./Withgoi"
+import Scheduler from "./Scheduler"
 
 function Home() {
+  const [open, setOpen] = useState(null);
+
   const minimes = "../../public/files/minimes.zip"
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
 
   return (
     <div id="home">
-      <div className="bg-[url('/topbg.svg')] bg-cover bg-center">
+      <div className="bg-[url('/topbg.svg')] bg-cover bg-center pb-11">
         <div className={`mx-auto max-w-7xl pl-9 text-6xl sm:pl-10 lg:pl-14 sm:text-7xl md:text-8xl lg:text-9xl font-bold ${home.bigTitle}`}>
           <div className="pt-25 text-gray-600/70 pb-10 transition-all duration-500 cursor-default">
             <p>Full Stack</p>
@@ -29,27 +56,29 @@ function Home() {
           <p>About Me</p>
         </div>
         <div className="flex flex-wrap justify-center py-10 gap-10 cursor-default">
-          <div className={`p-3 text-center border text-gray-700 border-gray-300 w-40 rounded-2xl transition-all duration-200
+          <div className={`p-3 text-center border text-gray-700 border-gray-300 w-50 rounded-2xl transition-all duration-200
                 hover:bg-gray-100 hover:shadow-lg hover:scale-105 hover:text-black ${home.text}`}>
             <p>이름</p>
             <p>노진욱</p>
           </div>
-          <div className={`p-3 text-center border text-gray-700 border-gray-300 w-40 rounded-2xl transition-all duration-200
+          <div className={`p-3 text-center border text-gray-700 border-gray-300 w-50 rounded-2xl transition-all duration-200
                 hover:bg-gray-100 hover:shadow-lg hover:scale-105 hover:text-black ${home.text}`}>
             <p>생년월일</p>
             <p>89.10.01</p>
           </div>
-          <div className={`p-3 text-center border text-gray-700 border-gray-300 w-40 rounded-2xl transition-all duration-200
+          <div className={`p-3 text-center border text-gray-700 border-gray-300 w-50 rounded-2xl transition-all duration-200
                 hover:bg-gray-100 hover:shadow-lg hover:scale-105 hover:text-black ${home.text}`}>
             <p>연락처</p>
-            <p>010-6526-9567</p>
+            <a href="tel:01065269567" className="hover:text-blue-700">
+              <p>010-6526-9567</p>
+            </a>
           </div>
           <div className={`p-3 text-center border text-gray-700 border-gray-300 w-50 rounded-2xl transition-all duration-200
                 hover:bg-gray-100 hover:shadow-lg hover:scale-105 hover:text-black ${home.text}`}>
             <p>이메일</p>
             <p>nju9567@gmail.com</p>
           </div>
-          <div className={`p-3 border text-gray-700 border-gray-300 w-40 rounded-2xl transition-all duration-200
+          <div className={`p-3 border text-gray-700 border-gray-300 w-50 rounded-2xl transition-all duration-200
                 hover:bg-gray-100 hover:shadow-lg hover:scale-105 hover:text-black ${home.text}`}>
             <p className="text-center">학력</p>
             <p>구미대학교</p>
@@ -60,68 +89,66 @@ function Home() {
       <div
         id="skills"
         className="bg-[url('/skillbg.svg')] bg-cover bg-center py-17 px-10">
-        <section className="my-auto mx-auto max-w-3xl pt-10 bg-white/50 rounded-3xl"        >
-          <div className={`flex justify-center text-4xl text-white cursor-default ${home.title}`}>
-            <p>Skills</p>
-          </div>
-          <div>
-            <div className="flex flex-wrap justify-center py-5 gap-5 cursor-default">
-              <div className="p-3 rounded-3xl transition-all duration-200 hover:shadow-lg hover:scale-110">
-                <div className="text-center">
-                  <span className="font-semibold">언어</span>
-                </div>
-                <div className="flex flex-wrap justify-center gap-2 mt-1 w-40">
-                  <span className="px-3 py-1 rounded-full bg-emerald-800 text-white">HTML5</span>
-                  <span className="px-3 py-1 rounded-full bg-red-300 text-white">CSS3</span>
-                  <span className="px-3 py-1 rounded-full bg-amber-300">JavaScript</span>
-                  <span className="px-3 py-1 rounded-full bg-blue-300 text-white">C#</span>
-                </div>
+        <div className={`flex justify-center text-4xl text-white cursor-default mb-8 ${home.title}`}>
+          <p>Skills</p>
+        </div>
+        <section className="my-auto mx-auto max-w-3xl bg-white/50 rounded-3xl"        >
+          <div className="flex flex-wrap justify-center gap-5 cursor-default">
+            <div className="p-3 rounded-3xl transition-all duration-200 hover:shadow-lg hover:scale-110">
+              <div className="text-center">
+                <span className="font-semibold">언어</span>
               </div>
-              <div className="p-3 rounded-3xl transition-all duration-200 hover:shadow-lg hover:scale-110">
-                <div className="text-center">
-                  <span className="font-semibold">프레임워크</span>
-                </div>
-                <div className="flex flex-wrap justify-center gap-2 mt-1 w-40">
-                  <span className="px-3 py-1 rounded-full bg-black/90 text-white">ReactJS</span>
-                </div>
+              <div className="flex flex-wrap justify-center gap-2 mt-1 w-40">
+                <span className="px-3 py-1 rounded-full bg-emerald-800 text-white">HTML5</span>
+                <span className="px-3 py-1 rounded-full bg-red-300 text-white">CSS3</span>
+                <span className="px-3 py-1 rounded-full bg-amber-300">JavaScript</span>
+                <span className="px-3 py-1 rounded-full bg-blue-300 text-white">C#</span>
               </div>
-              <div className="p-3 rounded-3xl transition-all duration-200 hover:shadow-lg hover:scale-110">
-                <div className="text-center">
-                  <span className="font-semibold">Backend</span>
-                </div>
-                <div className="flex flex-wrap justify-center gap-2 mt-1 w-50">
-                  <span className="px-3 py-1 rounded-full bg-green-600 text-white">Node.js</span>
-                  <span className="px-3 py-1 rounded-full bg-gray-600 text-white">Express.js</span>
-                  <span className="px-3 py-1 rounded-full bg-rose-500 text-white">RestAPI</span>
-                </div>
+            </div>
+            <div className="p-3 rounded-3xl transition-all duration-200 hover:shadow-lg hover:scale-110">
+              <div className="text-center">
+                <span className="font-semibold">프레임워크</span>
               </div>
-              <div className="p-3 rounded-3xl transition-all duration-200 hover:shadow-lg hover:scale-110">
-                <div className="text-center">
-                  <span className="font-semibold">Database / Cloud:</span>
-                </div>
-                <div className="flex flex-wrap justify-center gap-2 mt-1 w-50">
-                  <span className="px-3 py-1 rounded-full bg-blue-500 text-white">MySQL</span>
-                  <span className="px-3 py-1 rounded-full bg-gray-400 text-white">MariaDB</span>
-                  <span className="px-3 py-1 rounded-full bg-green-700 text-white">Supabase</span>
-                  <span className="px-3 py-1 rounded-full bg-orange-500 text-white">Docker</span>
-                  <span className="px-3 py-1 rounded-full bg-blue-400 text-white">Vercel</span>
-                </div>
+              <div className="flex flex-wrap justify-center gap-2 mt-1 w-40">
+                <span className="px-3 py-1 rounded-full bg-black/90 text-white">ReactJS</span>
               </div>
-              <div className="p-3 rounded-3xl transition-all duration-200 hover:shadow-lg hover:scale-110">
-                <div className="text-center">
-                  <span className="font-semibold">협업 / 도구</span>
-                </div>
-                <div className="flex flex-wrap justify-center gap-2 mt-1 max-w-70">
-                  <span className="px-3 py-1 rounded-full bg-teal-700 text-white">GitHub</span>
-                  <span className="px-3 py-1 rounded-full bg-violet-400 text-white">Git Bash</span>
-                  <span className="px-3 py-1 rounded-full bg-blue-950 text-white">SourceTree</span>
-                  <span className="px-3 py-1 rounded-full bg-orange-700 text-white">Postman</span>
-                  <span className="px-3 py-1 rounded-full bg-black/60 text-white">Notion</span>
-                  <span className="px-3 py-1 rounded-full bg-cyan-600 text-white">VSCode</span>
-                  <span className="px-3 py-1 rounded-full bg-violet-500 text-white">WebStorm</span>
-                  <span className="px-3 py-1 rounded-full bg-green-950/60 text-white">HeidiSQL</span>
-                  <span className="px-3 py-1 rounded-full bg-pink-800/50 text-white">Figma</span>
-                </div>
+            </div>
+            <div className="p-3 rounded-3xl transition-all duration-200 hover:shadow-lg hover:scale-110">
+              <div className="text-center">
+                <span className="font-semibold">Backend</span>
+              </div>
+              <div className="flex flex-wrap justify-center gap-2 mt-1 w-50">
+                <span className="px-3 py-1 rounded-full bg-green-600 text-white">Node.js</span>
+                <span className="px-3 py-1 rounded-full bg-gray-600 text-white">Express.js</span>
+                <span className="px-3 py-1 rounded-full bg-rose-500 text-white">RestAPI</span>
+              </div>
+            </div>
+            <div className="p-3 rounded-3xl transition-all duration-200 hover:shadow-lg hover:scale-110">
+              <div className="text-center">
+                <span className="font-semibold">Database / Cloud:</span>
+              </div>
+              <div className="flex flex-wrap justify-center gap-2 mt-1 w-50">
+                <span className="px-3 py-1 rounded-full bg-blue-500 text-white">MySQL</span>
+                <span className="px-3 py-1 rounded-full bg-gray-400 text-white">MariaDB</span>
+                <span className="px-3 py-1 rounded-full bg-green-700 text-white">Supabase</span>
+                <span className="px-3 py-1 rounded-full bg-orange-500 text-white">Docker</span>
+                <span className="px-3 py-1 rounded-full bg-blue-400 text-white">Vercel</span>
+              </div>
+            </div>
+            <div className="p-3 rounded-3xl transition-all duration-200 hover:shadow-lg hover:scale-110">
+              <div className="text-center">
+                <span className="font-semibold">협업 / 도구</span>
+              </div>
+              <div className="flex flex-wrap justify-center gap-2 mt-1 max-w-70">
+                <span className="px-3 py-1 rounded-full bg-teal-700 text-white">GitHub</span>
+                <span className="px-3 py-1 rounded-full bg-violet-400 text-white">Git Bash</span>
+                <span className="px-3 py-1 rounded-full bg-blue-950 text-white">SourceTree</span>
+                <span className="px-3 py-1 rounded-full bg-orange-700 text-white">Postman</span>
+                <span className="px-3 py-1 rounded-full bg-black/60 text-white">Notion</span>
+                <span className="px-3 py-1 rounded-full bg-cyan-600 text-white">VSCode</span>
+                <span className="px-3 py-1 rounded-full bg-violet-500 text-white">WebStorm</span>
+                <span className="px-3 py-1 rounded-full bg-green-950/60 text-white">HeidiSQL</span>
+                <span className="px-3 py-1 rounded-full bg-pink-800/50 text-white">Figma</span>
               </div>
             </div>
           </div>
@@ -158,12 +185,12 @@ function Home() {
       <div
         id="project"
         className="bg-[url('/projectbg.svg')] bg-cover bg-center py-5 px-10">
-        <section className="my-auto mx-auto max-w-4xl py-5 rounded-3xl">
+        <section className="my-auto mx-auto max-w-7xl py-5 rounded-3xl">
           <div className={`flex justify-center text-4xl text-white cursor-default ${home.title}`}>
             <p>Project</p>
           </div>
           <div className="flex flex-wrap justify-center gap-10 my-8">
-            <div className="w-full max-w-[400px] p-6 bg-gray-500/90 rounded-2xl cursor-default">
+            <div className="w-full max-w-[400px] p-6 bg-white/40 rounded-2xl cursor-default">
               <div>
                 <p className="px-3 py-1 rounded-lg text-[0.9rem] bg-red-500/80 text-white max-w-[145px]">C# 미니 Mes 버전</p>
                 <p className="ml-3 text-[0.8rem] text-white">2025.07 (1인 프로젝트)</p>
@@ -171,7 +198,7 @@ function Home() {
               <div className="my-3 flex justify-center">
                 <img src={csharp} alt="csharp" className="w-full max-w-40 " />
               </div>
-              <div className="text-gray-200">
+              <div className="text-white">
                 <p className="mb-1">- 로그인/로그아웃</p>
                 <p className="mb-1">- 간단한 입/출고/내역</p>
                 <p className="mb-1">- 직원등록,목록</p>
@@ -185,19 +212,22 @@ function Home() {
                 </a>
                 <p className="mt-3 p-1 rounded-xl w-10 text-center bg-blue-300 text-black">C#</p>
                 <div className="text-center">
-                  <button className="cursor-pointer pt-6">프로젝트 소개</button>
+                  <button
+                    className="cursor-pointer mt-6 w-35 hover:rounded-[5px] transition-all duration-200
+                hover:scale-125"
+                    onClick={() => setOpen("csharp")}>프로젝트 소개</button>
                 </div>
               </div>
             </div>
-            <div className="w-full max-w-[400px] p-6 bg-gray-500/90 rounded-2xl cursor-default">
+            <div className="w-full max-w-[400px] p-6 bg-white/40 rounded-2xl cursor-default">
               <div>
                 <p className="px-3 py-1 rounded-lg text-[0.9rem] bg-red-500/80 text-white max-w-[167px]">짐이동/보관 PWA버전</p>
                 <p className="ml-3 text-[0.8rem] text-white">2025.06 (팀 프로젝트)</p>
               </div>
               <div className="my-3 flex justify-center">
-                <img src={withpwa} alt="csharp" className="w-full max-w-21 " />
+                <img src={withpwa} alt="csharp" className="w-full max-w-22 " />
               </div>
-              <div className="text-gray-200">
+              <div className="text-white">
                 <p className="mb-1">- 카카오 로그인/로그아웃</p>
                 <p className="mb-1">- 배송/보관예약, 결제시스템</p>
                 <p className="mb-1">- 배송/보관 신청 및 진행이력 확인</p>
@@ -216,11 +246,13 @@ function Home() {
                   <p className="mt-3 p-1 rounded-xl max-w-20 text-center bg-green-700 text-white">Supabase</p>
                 </div>
                 <div className="text-center">
-                  <button className="cursor-pointer pt-6">프로젝트 소개</button>
+                  <button className="cursor-pointer mt-6 w-35 hover:rounded-[5px] transition-all duration-200
+                hover:scale-125"
+                    onClick={() => setOpen("WithgoPwa")}>프로젝트 소개</button>
                 </div>
               </div>
             </div>
-            <div className="w-full max-w-[400px] p-6 bg-gray-500/90 rounded-2xl cursor-default">
+            <div className="w-full max-w-[400px] p-6 bg-white/40 rounded-2xl cursor-default">
               <div>
                 <p className="px-3 py-1 rounded-lg text-[0.9rem] bg-red-500/80 text-white max-w-[125px]">
                   미세먼지서비스
@@ -228,9 +260,9 @@ function Home() {
                 <p className="ml-3 text-[0.8rem] text-white">2025.05 (팀 프로젝트)</p>
               </div>
               <div className="my-3 flex justify-center">
-                <img src={men} alt="csharp" className="w-full max-w-79 " />
+                <img src={men} alt="csharp" className="w-full max-w-81 " />
               </div>
-              <div className="text-gray-200">
+              <div className="text-white">
                 <p className="mb-1">- 메인화면 : 내 위치기준 오늘의 대기질</p>
                 <p className="mb-1">- 메인화면 : 내 위치기준 대기정보 예보</p>
                 <p className="mb-1">- 대기정보 : 실시간 대기정보 및 예보</p>
@@ -248,11 +280,13 @@ function Home() {
                   <p className="mt-3 p-1 rounded-xl max-w-15 text-center bg-pink-600/80 text-white">반응형</p>
                 </div>
                 <div className="text-center">
-                  <button className="cursor-pointer pt-6">프로젝트 소개</button>
+                  <button className="cursor-pointer mt-6 w-35 hover:rounded-[5px] transition-all duration-200
+                hover:scale-125"
+                    onClick={() => setOpen("Airservice")}>프로젝트 소개</button>
                 </div>
               </div>
             </div>
-            <div className="w-full max-w-[400px] p-6 bg-gray-500/90 rounded-2xl cursor-default">
+            <div className="w-full max-w-[400px] p-6 bg-white/40 rounded-2xl cursor-default">
               <div>
                 <p className="px-3 py-1 rounded-lg text-[0.9rem] bg-red-500/80 text-white max-w-[242px]">
                   짐이동/보관 관리자 웹,PWA(웹앱)
@@ -262,7 +296,7 @@ function Home() {
               <div className="my-3 flex justify-center">
                 <img src={withgoa} alt="csharp" className="w-full max-w-83 " />
               </div>
-              <div className="text-gray-200">
+              <div className="text-white">
                 <p className="mb-1">- 실시간 모니터링(신청일기준)</p>
                 <p className="mb-1">- 회원 목록(탈퇴)</p>
                 <p className="mb-1">- 기사 목록(상세, 수정, 삭제)</p>
@@ -280,11 +314,13 @@ function Home() {
                   <p className="mr-3 mt-3 p-1 rounded-xl max-w-15 text-center bg-pink-600/80 text-white">반응형</p>
                 </div>
                 <div className="text-center">
-                  <button className="cursor-pointer pt-6">프로젝트 소개</button>
+                  <button className="cursor-pointer mt-6 w-35 hover:rounded-[5px] transition-all duration-200
+                hover:scale-125"
+                    onClick={() => setOpen("WithgoA")}>프로젝트 소개</button>
                 </div>
               </div>
             </div>
-            <div className="w-full max-w-[400px] p-6 bg-gray-500/90 rounded-2xl cursor-default">
+            <div className="w-full max-w-[400px] p-6 bg-white/40 rounded-2xl cursor-default">
               <div>
                 <p className="px-3 py-1 rounded-lg text-[0.9rem] bg-red-500/80 text-white max-w-[151px]">
                   WithGo 문의게시판
@@ -294,7 +330,7 @@ function Home() {
               <div className="my-3 flex justify-center">
                 <img src={withgo} alt="csharp" className="w-full max-w-57 " />
               </div>
-              <div className="text-gray-200">
+              <div className={`text-black ${home.Ptext}`}>
                 <p className="mb-1">- 문의게시판</p>
                 <p className="mb-1">- 검색기능</p>
                 <p className="mb-1">- 페이지네이션</p>
@@ -302,7 +338,7 @@ function Home() {
                 <a
                   href="https://cjo3o.github.io/with_go/inquiry.html"
                   target="_blank"
-                  className="underline text-white hover:text-blue-800 cursor-pointer transition-colors"
+                  className={`underline text-black/80 hover:text-blue-800 cursor-pointer transition-colors ${home.Ptext2}`}
                 >
                   With_Go 사용자페이지 바로가기
                 </a>
@@ -313,11 +349,13 @@ function Home() {
                   <p className="mr-3 mt-3 p-1 rounded-xl max-w-20 text-center bg-green-700 text-white">Supabase</p>
                 </div>
                 <div className="text-center">
-                  <button className="cursor-pointer pt-6">프로젝트 소개</button>
+                  <button className="cursor-pointer mt-6 w-35 hover:rounded-[5px] transition-all duration-200
+                hover:scale-125"
+                    onClick={() => setOpen("Withgoi")}>프로젝트 소개</button>
                 </div>
               </div>
             </div>
-            <div className="w-full max-w-[400px] p-6 bg-gray-500/90 rounded-2xl cursor-default">
+            <div className="w-full max-w-[400px] p-6 bg-white/40 rounded-2xl cursor-default">
               <div>
                 <p className="px-3 py-1 rounded-lg text-[0.9rem] bg-red-500/80 text-white max-w-[119px]">
                   스케줄러 Html
@@ -327,7 +365,7 @@ function Home() {
               <div className="my-3 flex justify-center">
                 <img src={scheduler} alt="csharp" className="w-full max-w-35 " />
               </div>
-              <div className="text-gray-200">
+              <div className={`text-black ${home.Ptext3}`}>
                 <p className="mb-1">- 로그인 화면</p>
                 <p className="mb-1">- 회원가입 화면</p>
                 <p className="mb-1">- 아이디/비밀번호 찾기 화면</p>
@@ -335,7 +373,7 @@ function Home() {
                 <a
                   href="https://min9567.github.io/project/team1/login"
                   target="_blank"
-                  className="underline text-white hover:text-blue-800 cursor-pointer transition-colors"
+                  className={`underline text-black/80 hover:text-blue-800 cursor-pointer transition-colors ${home.Ptext3}`}
                 >
                   스케줄러 Html 바로가기
                 </a>
@@ -344,7 +382,9 @@ function Home() {
                   <p className="mr-3 mt-3 p-1 rounded-xl max-w-15 text-center bg-red-300 text-white">Css</p>
                 </div>
                 <div className="text-center">
-                  <button className="cursor-pointer pt-6">프로젝트 소개</button>
+                  <button className="cursor-pointer mt-6 w-35 hover:rounded-[5px] transition-all duration-200
+                hover:scale-125"
+                    onClick={() => setOpen("Scheduler")}>프로젝트 소개</button>
                 </div>
               </div>
             </div>
@@ -354,20 +394,98 @@ function Home() {
       <div
         id="step"
         className="py-5 px-10">
-        <section className="my-auto mx-auto max-w-4xl py-5 rounded-3xl">
+        <section className="my-auto mx-auto max-w-4xl py-5 rounded-3xl cursor-default">
           <div className={`flex justify-center text-4xl cursor-default ${home.title}`}>
             <p>Step</p>
           </div>
-          <div className="flex items-center">
-            <div className="border-r border-r-gray-500">
-              <img src={green} alt="green" />
+          <div className={`flex flex-wrap items-center gap-5 mb-7 ${home.Stitle}`}>
+            <div className={`${home.Stitle2}`}>
+              <img src={noimage} alt="green" className="max-w-30" />
             </div>
             <div>
-              - 
+              <p className="text-2xl">구직중</p>
+            </div>
+          </div>
+          <div className={`flex flex-wrap items-center gap-5 ${home.Stitle}`}>
+            <div className={`${home.Stitle2}`}>
+              <img src={green} alt="green" className="max-w-30" />
+            </div>
+            <div>
+              <p className="text-2xl">그린컴퓨터아트학원 대구</p>
+              <p className="ml-4 mb-2 text-gray-600">2024. 12. 31 ~ 2025. 07. 15</p>
+              <p className="text-[20px]">기업요구 프로젝트 중심 풀스택 개발자 (PWA를 활용한 React, Express.js) 교육과정 수료</p>
             </div>
           </div>
         </section>
       </div>
+      <div className="bg-blue-200 py-10 px-10 cursor-default">
+        <div className="my-auto mx-auto max-w-3xl">
+          <div className={`text-2xl ${home.Stitle3}`}>
+            <p>Finish</p>
+          </div>
+          <div className={`my-10 flex flex-wrap justify-center items-center gap-20 ${home.Stitle}`}>
+            <div className={`text-7xl ${home.Stitle5}`}>Thank you</div>
+            <div className="text-[1.5rem]">
+              <div className="flex items-center gap-2">
+                <img src={phone} alt="phone" className="max-w-7" />
+                <a href="tel:01065269567" className="hover:text-blue-700">
+                  <span>010-6526-9567</span>
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <img src={email} alt="email" className="max-w-7" />
+                <span>nju9567@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <img src={git} alt="git" className="max-w-7" />
+                <a href="https://github.com/min9567">
+                  <span className={`hover:text-blue-700 ${home.Stitle4}`}>
+                    https://github.com/min9567
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className={home.Stitle}>
+            <div className="flex flex-wrap justify-center text-2xl">
+              <p className="mr-2 mb-5 underline hover:text-blue-700">#늦은 시작</p>
+              <p className="mr-2 mb-5 underline hover:text-blue-700">#새로운 도전</p>
+              <p className="mr-2 mb-5 underline hover:text-blue-700">#노력</p>
+              <p className="mb-5 underline hover:text-blue-700">#no 포기!!</p>
+            </div>
+            <div>
+              <p className="text-3xl">사용자와 팀 모두에게 가치 있는 결과물을 만드는 개발자가 되겠습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {open && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50"
+          onClick={() => setOpen(false)}>
+          <div className="bg-white rounded-lg pl-8 pr-2 shadow-lg max-w-3xl w-full relative max-h-[70vh] overflow-y-auto"
+            onClick={e => e.stopPropagation()}>
+            <div className="sticky top-0 z-10 bg-white min-h-[44px]">
+              <div className="flex justify-end pt-2 pr-2">
+                <button
+                  className="text-gray-500 text-2xl cursor-pointer"
+                  onClick={() => setOpen(false)}
+                >
+                  ×
+                </button>
+              </div>
+            </div>
+            <div>
+              {open === "csharp" && <Pcsharp />}
+              {open === "WithgoPwa" && <WithgoPwa />}
+              {open === "Airservice" && <Airservice />}
+              {open === "WithgoA" && <WithgoA />}
+              {open === "Withgoi" && <Withgoi />}
+              {open === "Scheduler" && <Scheduler />}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
