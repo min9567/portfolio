@@ -51,7 +51,7 @@ function Home() {
       </div>
       <section
         id="about"
-        className="mx-auto max-w-3xl px-14 py-8 md:py-12 lg:py-16">
+        className="mx-auto max-w-4xl px-14 py-8 md:py-12 lg:py-16">
         <div className={`flex justify-center text-3xl sm:text-2xl text-black cursor-default ${home.title}`}>
           <p>About Me</p>
         </div>
@@ -92,7 +92,7 @@ function Home() {
         <div className={`flex justify-center text-4xl text-white cursor-default mb-8 ${home.title}`}>
           <p>Skills</p>
         </div>
-        <section className="my-auto mx-auto max-w-3xl bg-white/50 rounded-3xl"        >
+        <section className="my-auto mx-auto max-w-3xl bg-white/50 rounded-3xl">
           <div className="flex flex-wrap justify-center gap-5 cursor-default">
             <div className="p-3 rounded-3xl transition-all duration-200 hover:shadow-lg hover:scale-110">
               <div className="text-center">
