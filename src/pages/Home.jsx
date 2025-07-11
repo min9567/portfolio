@@ -15,6 +15,7 @@ import noimage from "../../public/noimage.svg"
 import email from "../../public/email.svg"
 import phone from "../../public/phone.svg"
 import git from "../../public/git.svg"
+import uparrow from "../../public/uparrow.svg";
 
 import Pcsharp from "./Pcsharp"
 import WithgoPwa from "./WithgoPwa"
@@ -25,6 +26,7 @@ import Scheduler from "./Scheduler"
 
 function Home() {
   const [open, setOpen] = useState(null);
+  const [showBtn, setShowBtn] = useState(false);
 
   const minimes = "../../public/files/minimes.zip"
 
@@ -38,6 +40,18 @@ function Home() {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBtn(window.scrollY > 200);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div id="home">
@@ -459,6 +473,16 @@ function Home() {
           </div>
         </div>
       </div>
+
+      {showBtn && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-6 right-1 sm:right-4 z-50shadow-lg p-0 sm:p-3 transition cursor-pointer"
+          aria-label="맨 위로"
+        >
+          <img src={uparrow} alt="맨 위로" className="w-15 h-15" />
+        </button>
+      )}
 
       {open && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50"
