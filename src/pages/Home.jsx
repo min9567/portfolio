@@ -146,14 +146,13 @@ function Home() {
                 <span className="px-3 py-1 rounded-full bg-gray-400 text-white">MariaDB</span>
                 <span className="px-3 py-1 rounded-full bg-green-700 text-white">Supabase</span>
                 <span className="px-3 py-1 rounded-full bg-orange-500 text-white">Docker</span>
-                <span className="px-3 py-1 rounded-full bg-blue-400 text-white">Vercel</span>
               </div>
             </div>
             <div className="p-3 rounded-3xl transition-all duration-200 hover:shadow-lg hover:scale-110">
               <div className="text-center">
                 <span className="font-semibold">협업 / 도구</span>
               </div>
-              <div className="flex flex-wrap justify-center gap-2 mt-1 max-w-70">
+              <div className="flex flex-wrap justify-center gap-2 mt-1 max-w-80">
                 <span className="px-3 py-1 rounded-full bg-teal-700 text-white">GitHub</span>
                 <span className="px-3 py-1 rounded-full bg-violet-400 text-white">Git Bash</span>
                 <span className="px-3 py-1 rounded-full bg-blue-950 text-white">SourceTree</span>
@@ -166,6 +165,7 @@ function Home() {
                 <span className="px-3 py-1 rounded-full bg-pink-400/80 text-white">Canva</span>
                 <span className="px-3 py-1 rounded-full bg-orange-400/80 text-white">Vite</span>
                 <span className="px-3 py-1 rounded-full bg-orange-800/80 text-white">Cursor</span>
+                <span className="px-3 py-1 rounded-full bg-blue-400 text-white">Vercel</span>
               </div>
             </div>
           </div>
