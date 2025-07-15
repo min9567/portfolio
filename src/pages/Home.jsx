@@ -182,7 +182,8 @@ function Home() {
             <a
               href="https://github.com/min9567"
               className="w-full max-w-[400px] p-4 bg-white rounded-2xl"
-              target="_blank">
+              target="_blank"
+              rel="noopener noreferrer">
               <img src={github} alt="github" className="w-full max-w-xs" />
               <p className="mb-4 underline text-blue-600 hover:text-blue-800 cursor-pointer transition-colors">https://github.com/min9567</p>
               <p>코드 저장소</p>
@@ -190,7 +191,8 @@ function Home() {
             <a
               href="https://ambiguous-ravioli-5f5.notion.site/Portfolio-185ad92b763180849898cba1790b85cc"
               className={`w-full max-w-[400px] p-4 bg-white rounded-2xl ${home.Rcard}`}
-              target="_blank">
+              target="_blank"
+              rel="noopener noreferrer">
               <img src={notion} alt="github" className="w-full max-w-xs" />
               <p className="mb-4 underline text-blue-600 hover:text-blue-800 cursor-pointer truncate  transition-colors">
                 https://ambiguous-ravioli-5f5.notion.site/Portfolio-185ad92b763180849898cba1790b85cc</p>
@@ -252,6 +254,7 @@ function Home() {
                 <a
                   href="https://with-go-mobile.vercel.app/login"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="underline text-white hover:text-blue-800 cursor-pointer transition-colors"
                 >
                   With_go Mobile Pwa 바로가기
@@ -288,6 +291,7 @@ function Home() {
                   href="https://meonmang.vercel.app/"
                   target="_blank"
                   className="underline text-white hover:text-blue-800 cursor-pointer transition-colors"
+                  rel="noopener noreferrer"
                 >
                   미세먼지서비스 바로가기
                 </a>
@@ -321,6 +325,7 @@ function Home() {
                 <a
                   href="https://with-go-admin-seven.vercel.app/login"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="underline text-white hover:text-blue-800 cursor-pointer transition-colors"
                 >
                   With_Go 관리자페이지 바로가기
@@ -355,6 +360,7 @@ function Home() {
                 <a
                   href="https://cjo3o.github.io/with_go/inquiry.html"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className={`underline text-black/80 hover:text-blue-800 cursor-pointer transition-colors ${home.Ptext2}`}
                 >
                   With_Go 사용자페이지 바로가기
@@ -391,6 +397,7 @@ function Home() {
                   href="https://min9567.github.io/project/team1/login"
                   target="_blank"
                   className={`underline text-black/80 hover:text-blue-800 cursor-pointer transition-colors ${home.Ptext3}`}
+                  rel="noopener noreferrer"
                 >
                   스케줄러 Html 바로가기
                 </a>
@@ -445,7 +452,7 @@ function Home() {
             <div className="text-[1.5rem]">
               <div className="flex items-center gap-2">
                 <img src={phone} alt="phone" className="max-w-7" />
-                <a href="tel:01065269567" className="hover:text-blue-700" rel="noopener noreferrer">
+                <a href="tel:01065269567" className="hover:text-blue-700">
                   <span>010-6526-9567</span>
                 </a>
               </div>
@@ -455,7 +462,7 @@ function Home() {
               </div>
               <div className="flex items-center gap-2">
                 <img src={git} alt="git" className="max-w-7" />
-                <a href="https://github.com/min9567" rel="noopener noreferrer">
+                <a href="https://github.com/min9567">
                   <span className={`hover:text-blue-700 ${home.Stitle4}`}>
                     https://github.com/min9567
                   </span>
