@@ -445,7 +445,7 @@ function Home() {
             <div className="text-[1.5rem]">
               <div className="flex items-center gap-2">
                 <img src={phone} alt="phone" className="max-w-7" />
-                <a href="tel:01065269567" className="hover:text-blue-700">
+                <a href="tel:01065269567" className="hover:text-blue-700" rel="noopener noreferrer">
                   <span>010-6526-9567</span>
                 </a>
               </div>
@@ -455,7 +455,7 @@ function Home() {
               </div>
               <div className="flex items-center gap-2">
                 <img src={git} alt="git" className="max-w-7" />
-                <a href="https://github.com/min9567">
+                <a href="https://github.com/min9567" rel="noopener noreferrer">
                   <span className={`hover:text-blue-700 ${home.Stitle4}`}>
                     https://github.com/min9567
                   </span>
