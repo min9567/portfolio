@@ -487,7 +487,7 @@ function Home() {
       {showBtn && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-1 sm:right-4 z-50 shadow-lg p-0 sm:p-3 transition cursor-pointer"
+          className="fixed bottom-6 right-1 sm:right-4 z-50 p-0 sm:p-3 transition cursor-pointer"
           aria-label="맨 위로"
         >
           <img src={uparrow} alt="맨 위로" className="w-15 h-15" />
