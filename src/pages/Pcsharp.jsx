@@ -18,6 +18,14 @@ function Pcsharp() {
                 <li>간단한 입/출고/내역 관리</li>
                 <li>직원/부서 등록 및 목록</li>
             </ul>
+            <h2 className="text-xl font-bold mb-2">resolve</h2>
+            <p>C#은 모르는게 너무 많아서&nbsp;
+                <a href="https://ambiguous-ravioli-5f5.notion.site/Portfolio-185ad92b763180849898cba1790b85cc"
+                    target="_blank"
+                    className="text-[1rem] text-blue-400 hover:text-black/80">
+                    노션(Notion)
+                </a>
+                에 정리해두었습니다.</p>
             <h2 className="text-xl font-bold my-3">Result</h2>
             <p className="pl-2">C#을 완전 처음 접할 때는 언어/프로그램 등 다 낯설었지만, 계속 만지며 찾아보고 공부하다보니 낯설다라는 느낌이 많아 사라지고, 코드에 대한 이해도도 많이 올라가서 좋았습니다. 앞으로도 지속적인 자기계발을 통해 역량을 키워나가보려 합니다.</p>
             <h2 className="text-xl font-bold mt-3">Stack</h2>

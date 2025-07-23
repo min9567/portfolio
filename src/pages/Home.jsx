@@ -407,7 +407,7 @@ function Home() {
                 <a
                   href="https://min9567.github.io/project/team1/login"
                   target="_blank"
-                  className={`underline text-black/80 hover:text-blue-800 cursor-pointer transition-colors ${home.Ptext3}`}
+                  className={`underline text-black/80 hover:text-blue-800 hover:font-bold cursor-pointer transition-colors ${home.Ptext3}`}
                   rel="noopener noreferrer"
                 >
                   스케줄러 Html 바로가기
@@ -508,7 +508,7 @@ function Home() {
       {open && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50"
           onClick={() => setOpen(false)}>
-          <div className="bg-white rounded-lg pl-8 pr-2 shadow-lg max-w-3xl w-full relative max-h-[70vh] overflow-y-auto"
+          <div className="mx-8 bg-white rounded-lg pl-4 pr-2 shadow-lg max-w-3xl w-full relative max-h-[70vh] overflow-y-auto"
             onClick={e => e.stopPropagation()}>
             <div className="sticky top-0 z-10 bg-white min-h-[44px]">
               <div className="flex justify-end pt-2 pr-2">

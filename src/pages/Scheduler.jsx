@@ -21,7 +21,7 @@ function Scheduler() {
             <ul className="list-disc pl-10 my-2">
                 <li>
                     아래 코드 css 적용시 없어짐.
-                    <pre className="bg-gray-200 p-3 rounded-2xl mt-2">
+                    <pre className="bg-gray-200 p-3 rounded-2xl mt-2 whitespace-pre-wrap break-all">
                         {`input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
 -webkit-appearance: none;

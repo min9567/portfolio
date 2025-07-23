@@ -95,13 +95,15 @@ function Header() {
             </div>
 
             {menuOpen && (
-                <div className="lg:hidden absolute top-[60px] right-0 w-full bg-white/90 shadow-xl rounded-b-2xl transition-all">
-                    <div className="flex flex-col items-end gap-3 p-8">
-                        <button onClick={handleAbout} className="py-2 text-lg text-gray-800 hover:text-black cursor-pointer">About Me</button>
-                        <button onClick={handleskills} className="py-2 text-lg text-gray-800 hover:text-black cursor-pointer">Skills</button>
-                        <button onClick={handlerepository} className="py-2 text-lg text-gray-800 hover:text-black cursor-pointer">Repository</button>
-                        <button onClick={handleproject} className="py-2 text-lg text-gray-800 hover:text-black cursor-pointer">Project</button>
-                        <button onClick={handlestep} className="py-2 text-lg text-gray-800 hover:text-black cursor-pointer">Step</button>
+                <div className="fixed inset-0 z-30" onClick={() => setMenuOpen(false)}>
+                    <div className="lg:hidden absolute top-[60px] right-0 w-full bg-white/80 shadow-xl rounded-b-2xl transition-all">
+                        <div className="flex flex-col items-end gap-3 p-8">
+                            <button onClick={() => { handleAbout(); setMenuOpen(false); }} className="py-2 text-lg text-gray-800 hover:text-black cursor-pointer">About Me</button>
+                            <button onClick={() => { handleskills(); setMenuOpen(false); }} className="py-2 text-lg text-gray-800 hover:text-black cursor-pointer">Skills</button>
+                            <button onClick={() => { handlerepository(); setMenuOpen(false); }} className="py-2 text-lg text-gray-800 hover:text-black cursor-pointer">Repository</button>
+                            <button onClick={() => { handleproject(); setMenuOpen(false); }} className="py-2 text-lg text-gray-800 hover:text-black cursor-pointer">Project</button>
+                            <button onClick={() => { handlestep(); setMenuOpen(false); }} className="py-2 text-lg text-gray-800 hover:text-black cursor-pointer">Step</button>
+                        </div>
                     </div>
                 </div>
             )}
