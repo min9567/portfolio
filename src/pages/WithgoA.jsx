@@ -7,11 +7,12 @@ function WithgoA() {
                 <h2 className="text-xl font-bold mb-1">짐이동/보관 관리자 웹, PWA</h2>
                 <span className="ml-1 text-[0.9rem] text-gray-700">(2025.04)</span>
             </div>
-            <p className="mb-3 ml-2">React, Supabase 기반 관리자 웹앱, 팀 프로젝트</p>
+            <p className="mb-3 ml-2">React, Supabase 기반 관리자 웹앱, 5인 팀 프로젝트</p>
             <h2 className="text-xl font-bold mb-3">Purpose of making</h2>
             <p className="pl-2">짐이동/보관서비스 사용자 웹을 만들고나니, 사용자 웹을 관리할 관리자 웹이 필요하다는 걸 알게 되어 관리자 웹을 구현하였습니다.</p>
             <h2 className="text-xl font-bold mt-3">function</h2>
             <ul className="list-disc pl-8 my-2">
+                <li>화면 기획 / 팀원 역할 분담</li>
                 <li>실시간 모니터링(신청일 기준)</li>
                 <li>회원/기사 목록 및 관리</li>
                 <li>기사 등록 및 상세/수정/삭제</li>

@@ -7,7 +7,7 @@ function Scheduler() {
                 <h2 className="text-xl font-bold mb-1">스케줄러 Html</h2>
                 <span className="ml-1 text-[0.9rem] text-gray-700">(2025.01)</span>
             </div>
-            <p className="mb-3 ml-2">기본 UI/UX 구현, HTML과 CSS 중심, 팀 프로젝트</p>
+            <p className="mb-3 ml-2">HTML과 CSS, 3인 팀 프로젝트</p>
             <h2 className="text-xl font-bold mb-3">Purpose of making</h2>
             <p className="pl-2">교육과정 시작하고, 팀 프로젝트로 처음 구현했습니다. Html/Css만 했으며, 이때는 처음하다보니 label, img, input만 주로 사용해서 만들었습니다.</p>
             <h2 className="text-xl font-bold mt-3">function</h2>
@@ -16,8 +16,21 @@ function Scheduler() {
                 <li>회원가입 화면</li>
                 <li>아이디/비밀번호 찾기</li>
             </ul>
-                        <h2 className="text-xl font-bold mb-2">Result</h2>
-            <p className="pl-2">교육과정 시작하고 얼마안되서 바로 시작한 팀 프로젝트인데.. 개발을 공부한지 얼마 안되다 보니 css를 적용해야하는게 막막했고 프로젝트를 했지만, 이해가 안되는 부분이 많았습니다. 생각해보면 프로젝트를 하면서 html/css에 대해 자세히 알 수 있었던 것 같습니다.</p>
+            <h2 className="text-xl font-bold mb-2">resolve</h2>
+            <p className="pl-3.5">1. input="number" 사용시 텍스트 입력란 오른쪽 상하 화살표 나오는 것 없애기</p>
+            <ul className="list-disc pl-10 my-2">
+                <li>
+                    아래 코드 css 적용시 없어짐.
+                    <pre className="bg-gray-200 p-3 rounded-2xl mt-2">
+                        {`input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;}`}
+                    </pre>
+                </li>
+            </ul>
+            <h2 className="text-xl font-bold mb-2">Result</h2>
+            <p className="pl-2">교육과정 시작하고 얼마안되서 바로 시작한 팀 프로젝트인데.. 개발을 공부한지 얼마 안되다 보니 css를 적용해야하는게 막막했고 프로젝트를 했지만, 이해가 안되는 부분이 많았습니다. 프로젝트를 하면서 html/css에 대해 자세히 알 수 있었습니다.</p>
             <h2 className="text-xl font-bold mt-3">Stack</h2>
             <p className="pl-2 my-2">HTML / CSS</p>
 

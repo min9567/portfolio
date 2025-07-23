@@ -208,6 +208,17 @@ function Home() {
           <div className={`flex justify-center text-4xl text-white cursor-default ${home.title}`}>
             <p>Project</p>
           </div>
+          <div className={`flex justify-center text-white cursor-default mt-2 ${home.title2}`}>
+            <p className="text-[1.2rem]">
+              프로젝트 문제해결 등 세부사항은&nbsp;
+              <a href="https://ambiguous-ravioli-5f5.notion.site/Portfolio-185ad92b763180849898cba1790b85cc"
+              target="_blank"
+              className="text-2xl text-blue-400 hover:text-black/80">
+                노션(Notion)
+              </a>
+              에 자세히 있습니다.
+            </p>
+          </div>
           <div className="flex flex-wrap justify-center gap-10 my-8">
             <div className="w-full max-w-[400px] p-6 bg-white/40 rounded-2xl cursor-default">
               <div>
